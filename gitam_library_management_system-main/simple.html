@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image and Text Display</title>
+<style>
+  /* Style for centering elements */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  #content {
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div id="content">
+  <img id="image" src="/Animation - 1711096827449.gif" alt="Image" style="display: block;">
+  <p id="text" style="display: none;">Your text goes here.</p>
+</div>
+
+<script>
+  // Function to display image for 5 seconds and then show text
+  function displayContent() {
+    setTimeout(function() {
+      document.getElementById('image').style.display = 'none';
+      document.getElementById('text').style.display = 'block';
+    }, 3000); // 5000 milliseconds = 5 seconds
+  }
+
+  // Call the function when the page loads
+  window.onload = displayContent;
+</script>
+</body>
+</html>
